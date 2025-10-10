@@ -1,0 +1,89 @@
+/* ==========================================================
+   ESTILOS DE COMPONENTE - src/app/perfil-card/perfil-card.component.scss
+   ========================================================== */
+
+/* Estilo para tu nombre (H1) */
+h1 {
+    font-size: 2.8rem;
+    color: #22223b;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 8px #a3cef1;
+    /* Aplica la animación de levitación aquí */
+    animation: levitate 3s ease-in-out infinite alternate; 
+}
+
+/* Estilo para el texto animado (Amante del dibujo) */
+.animated-text {
+    opacity: 0;
+    transform: translateY(-60px);
+    background: #fff;
+    padding: 18px 36px;
+    border-radius: 30px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.2);
+    /* Se aplica inicialmente la animación fadeInUp */
+    animation: fadeInUp 0.8s forwards;
+}
+
+/* El JavaScript migrado (TypeScript) añade la clase 'active' después de 600ms */
+.animated-text.active {
+    /* Aquí puedes poner estilos que quieras aplicar tras el setTimeout */
+    // Por ejemplo, asegurar que la opacidad y posición sean finales
+}
+
+/* =======================================
+   DEFINICIÓN DE ANIMACIONES (@keyframes)
+   ======================================= */
+
+/* Animación de entrada y ascenso (fadeInUp) */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de rebote (bounce) - Si no la usas en HTML, puedes quitarla */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(0);
+    }
+}
+
+/* Animación de caída (dropIn) - Si no la usas en HTML, puedes quitarla */
+@keyframes dropIn {
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación principal de levitación (levitate) */
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}

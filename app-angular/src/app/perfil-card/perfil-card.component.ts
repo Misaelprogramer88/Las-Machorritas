@@ -1,21 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-perfil-card',
   templateUrl: './perfil-card.component.html',
   styleUrls: ['./perfil-card.component.scss']
 })
-export class PerfilCardComponent implements OnInit {
-
-  // La variable que conecta el TS con el HTML
-  isActive: boolean = false; 
+export class PerfilCardComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
   ngOnInit(): void {
-    // La lógica JS migrada a TypeScript
-    setTimeout(() => {
-      this.isActive = true; 
-    }, 600);
+  }
+
+  ngAfterViewInit(): void {
+    // Animaciones para las secciones
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+      setTimeout(() => {
+        section.classList.add('visible');
+      }, 600 + index * 200);
+    });
   }
 }

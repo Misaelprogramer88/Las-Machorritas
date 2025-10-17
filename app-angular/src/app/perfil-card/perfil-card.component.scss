@@ -1,41 +1,52 @@
-/* ==========================================================
-   ESTILOS DE COMPONENTE - src/app/perfil-card/perfil-card.component.scss
-   ========================================================== */
-
-/* Estilo para tu nombre (H1) */
 h1 {
     font-size: 2.8rem;
     color: #22223b;
     letter-spacing: 2px;
     margin-bottom: 30px;
     text-shadow: 0 2px 8px #a3cef1;
-    /* Aplica la animación de levitación aquí */
-    animation: levitate 3s ease-in-out infinite alternate; 
+    animation: levitate 3s ease-in-out infinite alternate;
+    text-align: center;
 }
 
-/* Estilo para el texto animado (Amante del dibujo) */
-.animated-text {
-    opacity: 0;
-    transform: translateY(-60px);
-    background: #fff;
-    padding: 18px 36px;
-    border-radius: 30px;
+.section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
     box-shadow: 0 4px 24px rgba(44, 62, 80, 0.2);
-    /* Se aplica inicialmente la animación fadeInUp */
-    animation: fadeInUp 0.8s forwards;
+    animation: levitate 3s ease-in-out infinite alternate;
 }
 
-/* El JavaScript migrado (TypeScript) añade la clase 'active' después de 600ms */
-.animated-text.active {
-    /* Aquí puedes poner estilos que quieras aplicar tras el setTimeout */
-    // Por ejemplo, asegurar que la opacidad y posición sean finales
+.section h2 {
+    color: #22223b;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Arial Black', Arial, sans-serif;
 }
 
-/* =======================================
-   DEFINICIÓN DE ANIMACIONES (@keyframes)
-   ======================================= */
+.section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
 
-/* Animación de entrada y ascenso (fadeInUp) */
+.section ul {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.social-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #22223b;
+}
+
+.social-links a:hover {
+    color: #a3cef1;
+}
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -43,7 +54,6 @@ h1 {
     }
 }
 
-/* Animación de rebote (bounce) - Si no la usas en HTML, puedes quitarla */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -62,7 +72,6 @@ h1 {
     }
 }
 
-/* Animación de caída (dropIn) - Si no la usas en HTML, puedes quitarla */
 @keyframes dropIn {
     0% {
         transform: translateY(-80px);
@@ -78,7 +87,6 @@ h1 {
     }
 }
 
-/* Animación principal de levitación (levitate) */
 @keyframes levitate {
     0% {
         transform: translateY(0);

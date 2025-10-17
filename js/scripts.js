@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        document.getElementById('subtitle').classList.add('active');
-    }, 600);
+    // Animation for sections if needed, but since we removed the animated-text, this can be simplified or removed
+    // For now, keeping it simple
 });

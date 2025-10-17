@@ -1,4 +1,6 @@
+// Animaciones para las secciones
 window.addEventListener('DOMContentLoaded', () => {
-    // Animation for sections if needed, but since we removed the animated-text, this can be simplified or removed
-    // For now, keeping it simple
+    setTimeout(() => {
+        document.getElementById('subtitle').classList.add('active');
+    }, 600);
 });
